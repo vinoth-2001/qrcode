@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRcode</title>
+</head>
+<body>
+    <center>
+        <h1 id="hide">QR Generater</h1>
+        <img src="{{ url_for('static', filename='qr.png') }}" alt="qr">
+        <br>
+        <br>
+        <h1 id="hide1">Take a Screenshot <br> Share </h1>
+        <button onclick="toggle_display()">Hide text</button>
+    </center>
+    <script>
+        function toggle_display(){
+            el = document.getElementById('hide');
+            el1 = document.getElementById('hide1');
+            
+            if(el.style.visibility == 'hidden'){
+                el.style.visibility = 'visible'
+            }else{
+               el.style.visibility = 'hidden'
+            }
+            if(el1.style.visibility == 'hidden'){
+                el1.style.visibility = 'visible'
+            }else{
+               el1.style.visibility = 'hidden'
+            }
+          }
+    </script>
+</body>
+</html>
